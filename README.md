@@ -53,3 +53,22 @@ Change `hello_controller.js` to `hello_controller.ts`
 **Turbo**: Manages HTML request to the server.
 **Stimulus**: Is a minimal JS library well suited to small interactions that Turbo can't handle.
 
+### Turbo Stream
+
+```html
+<turbo-stream action="<ACTION>" target="<TARGET>" targets="<TARGET_1> <TARGET_2>">
+    <template>
+        OUR HTML GOES HERE
+    </template>
+</turbo-stream>
+```
+
+There are seven actions:
+- **after**: is added after the element with the target ID.
+- **append**: is added at the end of the target
+- **before**: is added before the element with the target ID.
+- **prepend**: is added at the beginning of the target
+- **remove**: is removed. Does not need any content.
+- **replace**: will completely replace the existing element with the target ID.
+- **update**: will replace the context of the target, but not the element itself.
+

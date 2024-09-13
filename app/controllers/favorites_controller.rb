@@ -3,13 +3,13 @@ class FavoritesController < ApplicationController
 
   def create
     Favorite.create(user: current_user, concert_id: params[:concert_id])
-    render(partial: 'favorites/list')
+    respond_to(&:turbo_stream)
   end
 
   def destroy
     @favorite = Favorite.find(params[:id])
     @favorite.destroy
-    render(partial: 'favorites/list')
+    respond_to(&:turbo_stream)
   end
 
   private
