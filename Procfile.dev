@@ -1,4 +1,4 @@
 postgres: postgres -D $HOME/.asdf/installs/postgres/16.2/data
 web: bin/rails server -p 3000
-js: yarn build --watch
+js: yarn dev
 css: yarn build:css --watch
