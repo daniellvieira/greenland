@@ -83,7 +83,8 @@ There is also a generator
 These are the stimulus structure:
 - **controller**: The main file that contains the logic.
 - **action**: The method that is called when the event is triggered.
-- **target**: The element that the controller is attached to.
+- **target**: The element that the controller is attached to. Target names need to be in camelCase in the HTML attribute.
+  - Stimulus requires that any target that is used in the controller need to be declared in a static variable called `targets`.
 - **value**: The value that is passed to the action.
 
 - **data-action**: The event that triggers the action, has three parts:
