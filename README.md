@@ -72,3 +72,21 @@ There are seven actions:
 - **replace**: will completely replace the existing element with the target ID.
 - **update**: will replace the context of the target, but not the element itself.
 
+### Stimulus
+
+Generate a manifest of existing controllers
+`./bin/rails stimulus:manifest:update`
+
+There is also a generator
+`rails generate stimulus controllerName`, that will update the manifest and create a skeleton file.
+
+These are the stimulus structure:
+- **controller**: The main file that contains the logic.
+- **action**: The method that is called when the event is triggered.
+- **target**: The element that the controller is attached to.
+- **value**: The value that is passed to the action.
+
+- **data-action**: The event that triggers the action, has three parts:
+    - **eventName**: The name of the event, followed by an arrow (->).
+    - **controllerName**: The name of the controller. This element ends with a hashtag (#).
+    - **nameMethod**: The name of the method that will be called on the controller. Usually use a camelCase.
