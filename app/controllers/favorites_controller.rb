@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   def index; end
 
   def create
-    Favorite.create(user: current_user, concert_id: params[:concert_id])
+    @favorite = Favorite.create(user: current_user, concert_id: params[:concert_id])
     respond_to(&:turbo_stream)
   end
 
