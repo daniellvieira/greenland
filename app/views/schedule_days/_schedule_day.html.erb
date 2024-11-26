@@ -1,13 +1,29 @@
-<h2 class="text-3xl font-bold">
-  <%= schedule_day.day.by_example("Monday, January 2, 2006") %>
-  <span class="<%= SimpleForm.button_class %> py-1 text-xl font-semibold">
-    Hide
-  </span>
-</h2>
-<% if show %>
-  <section class="js--day-text">
-    <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
-      <%= render(concert) %>
-    <% end %>
-  </section>
-<% end %>
+<section
+  data-controller="css"
+  data-css-css-class="hidden"
+  data-css-hide-value="false"
+>
+  <h2 class="text-3xl font-bold">
+    <%= schedule_day.day.by_example("Monday, January 2, 2006") %>
+    <button
+      class="<%= SimpleForm.button_class %> py-1 text-xl font-semibold"
+      data-controller="text"
+      data-text-target="elementWithText"
+      data-text-hide-value="false"
+      data-text-off-value="Hide Day"
+      data-text-on-value="Show Day"
+      data-action="click->text#toggle click->css#toggle"
+    >
+      Hide
+    </button>
+  </h2>
+  <% if show %>
+    <div data-css-target="elementToChange">
+      <section class="js--day-text">
+        <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
+          <%= render(concert) %>
+        <% end %>
+      </section>
+    </div>
+  <% end %>
+</section>
