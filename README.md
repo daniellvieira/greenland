@@ -91,3 +91,12 @@ These are the stimulus structure:
     - **eventName**: The name of the event, followed by an arrow (->).
     - **controllerName**: The name of the controller. This element ends with a hashtag (#).
     - **nameMethod**: The name of the method that will be called on the controller. Usually use a camelCase.
+
+#### Name conventions
+| Item       | Attribute                                 | Naming Convention                 |
+|------------|-------------------------------------------|-----------------------------------|
+| Controller | data-controller                           | controller-name                   |
+| Action     | data-action                               | event->controller-name#methodName |
+| Target     | data-controller-name-target               | targetName                        |
+| Value      | data-controller-name-attribute-name-value | value                             |
+| Class      | data-controller-name-description-class    | value                             |
