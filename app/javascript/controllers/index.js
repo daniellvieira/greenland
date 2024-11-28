@@ -7,5 +7,8 @@ import { application } from "./application"
 import CssController from "./css_controller"
 application.register("css", CssController)
 
+import CssFlipController from "./css_flip_controller"
+application.register("css-flip", CssFlipController)
+
 import TextController from "./text_controller"
 application.register("text", TextController)
