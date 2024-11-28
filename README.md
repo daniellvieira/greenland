@@ -100,3 +100,25 @@ These are the stimulus structure:
 | Target     | data-controller-name-target               | targetName                        |
 | Value      | data-controller-name-attribute-name-value | value                             |
 | Class      | data-controller-name-description-class    | value                             |
+
+
+## React
+
+### Installation
+
+1 - Install the dependencies
+```bash
+ yarn add react react-dom @babel/preset-react @types/react @types/react-dom
+ yarn add --dev eslint-plugin-react
+ 
+```
+
+2 - Update the tsconfig.json
+```json
+{
+  "compilerOptions": {
+    "jsx": "react"
+  }
+}
+```
+
