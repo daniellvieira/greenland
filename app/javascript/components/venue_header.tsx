@@ -1,4 +1,12 @@
 import * as React from "react"
+import styled from "styled-components"
+
+const Header = styled.span`
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: 10px;
+  margin-left: 10px;
+`
 
 interface VenueHeaderProps {
   seatsPerRow: number
@@ -25,7 +33,7 @@ export const VenueHeader = ({
 
   return (
     <div>
-      <span>How many tickets would you like?</span>
+      <Header>How many tickets would you like?</Header>
       <span className="select">
         <select onChange={setTicketsOnChange}>
           {options(seatsPerRow)}
